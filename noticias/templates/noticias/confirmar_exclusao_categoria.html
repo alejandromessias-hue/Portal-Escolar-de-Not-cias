@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Confirmar Exclusão de Categoria</h2>
+
+<!-- DESAFIO COMPLEMENTAR: Mensagem de aviso exibida antes da confirmação -->
+<div class="alert alert-warning mt-3">
+  <strong>Aviso:</strong> Esta categoria poderá estar vinculada a notícias. Caso existam notícias associadas, a exclusão será impedida.[cite: 2]
+</div>
+
+<p>Tem certeza que deseja excluir a categoria <strong>{{ categoria.nome }}</strong>?</p>[cite: 1]
+
+<form method="post">
+  {% csrf_token %}[cite: 1]
+  <button type="submit" class="btn btn-danger">Confirmar exclusão</button>[cite: 1]
+  <a href="{% url 'listar_categorias' %}" class="btn btn-secondary">Cancelar</a>[cite: 1]
+</form>
+{% endblock %}
