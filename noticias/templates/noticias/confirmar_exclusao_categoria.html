@@ -5,14 +5,14 @@
 
 <!-- DESAFIO COMPLEMENTAR: Mensagem de aviso exibida antes da confirmação -->
 <div class="alert alert-warning mt-3">
-  <strong>Aviso:</strong> Esta categoria poderá estar vinculada a notícias. Caso existam notícias associadas, a exclusão será impedida.[cite: 2]
+  <strong>Aviso:</strong> Esta categoria poderá estar vinculada a notícias. Caso existam notícias associadas, a exclusão será impedida.
 </div>
 
-<p>Tem certeza que deseja excluir a categoria <strong>{{ categoria.nome }}</strong>?</p>[cite: 1]
+<p>Tem certeza que deseja excluir a categoria <strong>{{ categoria.nome }}</strong>?</p>
 
 <form method="post">
-  {% csrf_token %}[cite: 1]
-  <button type="submit" class="btn btn-danger">Confirmar exclusão</button>[cite: 1]
-  <a href="{% url 'listar_categorias' %}" class="btn btn-secondary">Cancelar</a>[cite: 1]
+  {% csrf_token %}
+  <button type="submit" class="btn btn-danger">Confirmar exclusão</button>
+  <a href="{% url 'listar_categorias' %}" class="btn btn-secondary">Cancelar</a>
 </form>
 {% endblock %}
